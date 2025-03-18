@@ -141,7 +141,7 @@
               </descriptorRefs>
               <archive>
                 <manifestEntries>
-                  <Multi-Release>false</Multi-Release>
+                  <Multi-Release>true</Multi-Release>
                 </manifestEntries>
                 <manifest>
                   <mainClass>org.dbx.MyApplication</mainClass>
