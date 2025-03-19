@@ -88,6 +88,11 @@
       <artifactId>camel-test-main-junit5</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-xml-jaxb</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>

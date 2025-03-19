@@ -24,11 +24,13 @@ class MyApplicationTest extends CamelMainTestSupport {
         return MyApplication.class;
     }
 
+
+
     @Test
     void should_complete_the_auto_detected_route() throws Exception {
 
-       adviceWith(context, "api", rb -> rb
-               .weaveByToUri("https://api.restful-api.dev/objects")
+       adviceWith(context, "api", arb -> arb
+               .weaveById("external-api")
                .replace()
                .to("mock:external-api"));
 

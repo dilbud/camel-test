@@ -17,7 +17,7 @@ public class MyRouteBuilder extends RouteBuilder {
                 .routeId("api")
                 .setHeader(Exchange.HTTP_METHOD, constant("GET"))
                 .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-                .to("https://api.restful-api.dev/objects")
+                .to("{{external.api}}").id("external-api")
                 .to("direct:return");
 
         // Existing return route
