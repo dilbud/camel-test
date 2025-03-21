@@ -22,7 +22,7 @@ public class XsltRouteBuilder extends RouteBuilder {
                 .to("xslt:classpath:example.xslt")
                 .process(exchange -> {
                     String content = exchange.getIn().getBody(String.class);
-                    Path path = Paths.get("output/output.txt");
+                    Path path = Paths.get("output/output.xml");
                     Files.createDirectories(path.getParent());
                     Files.writeString(path, content, StandardCharsets.UTF_8, StandardOpenOption.CREATE);
                 });
