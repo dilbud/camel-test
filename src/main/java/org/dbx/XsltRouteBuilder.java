@@ -14,12 +14,15 @@ public class XsltRouteBuilder extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        var xsltComponent = getCamelContext().getComponent("xslt", XsltComponent.class);
+//        var xsltComponent = getCamelContext().getComponent("xslt", XsltComponent.class);
+//        xsltComponent.setUriResolver(new CustomXsltUriResolver<>(XsltRouteBuilder.class));
+        getCamelContext().addComponent("xsltss", new XsltComponent());
+        var xsltComponent = getCamelContext().getComponent("xsltss", XsltComponent.class);
         xsltComponent.setUriResolver(new CustomXsltUriResolver<>(XsltRouteBuilder.class));
 
         from("scheduler://myScheduler?delay=1000&repeatCount=1")
                 .setBody(constant(Files.readString(Paths.get("input/input.xml"))))
-                .to("xslt:classpath:example.xslt")
+                .to("xsltss:classpath:example.xslt")
                 .process(exchange -> {
                     String content = exchange.getIn().getBody(String.class);
                     Path path = Paths.get("output/output.xml");
