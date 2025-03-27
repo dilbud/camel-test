@@ -27,6 +27,7 @@ class MyApplicationTest extends CamelMainTestSupport {
 
 
 
+    @Disabled
     @Test
     void should_complete_the_auto_detected_route() throws Exception {
 

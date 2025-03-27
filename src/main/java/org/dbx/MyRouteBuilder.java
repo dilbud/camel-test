@@ -15,9 +15,9 @@ public class MyRouteBuilder extends RouteBuilder {
         // Ensure this route exists
         from("direct:api")
                 .routeId("api")
-                .setHeader(Exchange.HTTP_METHOD, constant("GET"))
-                .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-                .to("{{external.api}}").id("external-api")
+//                .setHeader(Exchange.HTTP_METHOD, constant("GET"))
+//                .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
+//                .to("{{external.api}}").id("external-api")
                 .to("direct:return");
 
         // Existing return route

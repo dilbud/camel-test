@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c6c99c7-587b-4c60-b3d7-6a68304e52dd" name="Changes" comment="add custom uri resolver fix">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grafana/grafana.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/otel/otelcol-config-extras.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/otel/otelcol-config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prometheus/prometheus-config.yaml" afterDir="false" />
+    <list default="true" id="9c6c99c7-587b-4c60-b3d7-6a68304e52dd" name="Changes" comment="add opentelemetry">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dbx/MyRouteBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dbx/MyRouteBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.propertiesx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dbx/MyApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dbx/MyApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +30,10 @@
     &quot;accountId&quot;: &quot;6afb7beb-05f1-444c-8ec9-0025fc3e7567&quot;
   }
 }</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -51,6 +49,7 @@
     "JAR Application.Unnamed.executor": "Run",
     "JAR Application.jar.executor": "Run",
     "Maven.camel-test [clean,install,camel:run].executor": "Run",
+    "Maven.camel-test [clean,install].executor": "Run",
     "Maven.camel-test [clean].executor": "Run",
     "Maven.camel-test [install].executor": "Run",
     "Maven.camel-test [org.apache.camel:camel-maven-plugin:4.10.2:dev].executor": "Run",
@@ -59,7 +58,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/PROJECTS/learning/spring/camel-test/target/camel-test-1.0.0-SNAPSHOT-jar-with-dependencies.jar",
+    "last_opened_file_path": "D:/PROJECTS/learning/spring/camel-test/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,7 +70,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PROJECTS\learning\spring\camel-test\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JAR Application.jar">
     <configuration name="MyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dbx.MyApplication" />
       <module name="camel-test" />
@@ -88,8 +92,11 @@
     <configuration name="jar" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/camel-test-1.0.0-SNAPSHOT-jar-with-dependencies.jar" />
       <option name="WORKING_DIRECTORY" value="D:\PROJECTS\learning\spring\camel-test" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean install" />
+      </method>
     </configuration>
     <configuration name="camel-test [clean,install,camel:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
@@ -162,7 +169,8 @@
       <updated>1742567548775</updated>
       <workItem from="1742567549879" duration="2763000" />
       <workItem from="1742571750589" duration="553000" />
-      <workItem from="1742826325072" duration="5143000" />
+      <workItem from="1742826325072" duration="5751000" />
+      <workItem from="1743083702104" duration="2582000" />
     </task>
     <task id="LOCAL-00001" summary="add custom uri resolver">
       <option name="closed" value="true" />
@@ -196,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742826404443</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add opentelemetry">
+      <option name="closed" value="true" />
+      <created>1742831916483</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742831916483</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +221,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add custom uri resolver" />
     <MESSAGE value="add custom uri resolver fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="add custom uri resolver fix" />
+    <MESSAGE value="add opentelemetry" />
+    <option name="LAST_COMMIT_MESSAGE" value="add opentelemetry" />
   </component>
 </project>
