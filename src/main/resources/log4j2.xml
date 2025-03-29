@@ -14,8 +14,8 @@
             <AppenderRef ref="CONSOLE" level="INFO"/>
         </Root>
         <!-- Apache Camel logger -->
-        <Logger name="org.apache.camel.main.BaseMainSupport" level="OFF" additivity="false">
-            <AppenderRef ref="CONSOLE"/>
-        </Logger>
+<!--        <Logger name="org.apache.camel.main.BaseMainSupport" level="OFF" additivity="false">-->
+<!--            <AppenderRef ref="CONSOLE"/>-->
+<!--        </Logger>-->
     </Loggers>
 </Configuration>
